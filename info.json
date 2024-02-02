@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "0688466879057425ec663971e979a2cdbe89928d",
+    "author": "Mario Gavidia-Calderón <mgavidiac@gmail.com>",
+    "time": "2023-08-01 22:41:17",
+    "files": 3,
+    "merge": false,
+    "message": "fix: update tests\n"
+  },
+  "repo": "https://github.com/ropensci/qualR",
+  "pkg": "qualR"
+}

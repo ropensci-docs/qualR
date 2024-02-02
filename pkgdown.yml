@@ -1,0 +1,10 @@
+pandoc: 2.16.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  qualr: qualr.html
+last_built: 2024-02-02T05:55Z
+urls:
+  reference: https://docs.ropensci.org/qualR/reference
+  article: https://docs.ropensci.org/qualR/articles
+
