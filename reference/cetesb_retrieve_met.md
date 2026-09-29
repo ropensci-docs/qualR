@@ -1,0 +1,79 @@
+# Download meteorological parameters from CETESB QUALAR
+
+This function download the main meteorological parameters for model
+evaluation from one air quality station (AQS) of CETESB AQS network. It
+will pad out the date with missing data with NA. This function requires
+to have [an
+account](https://seguranca.cetesb.sp.gov.br/Home/CadastrarUsuario) in
+[CETESB QUALAR](https://qualar.cetesb.sp.gov.br/qualar/home.do).
+
+## Usage
+
+``` r
+cetesb_retrieve_met(
+  username,
+  password,
+  aqs_code,
+  start_date,
+  end_date,
+  verbose = TRUE,
+  to_csv = FALSE,
+  csv_path = ""
+)
+```
+
+## Arguments
+
+- username:
+
+  User name of CETESB QUALAR
+
+- password:
+
+  User name's password of CETESB QUALAR
+
+- aqs_code:
+
+  Code of AQS
+
+- start_date:
+
+  Date to start downloading in dd/mm/yyyy
+
+- end_date:
+
+  Date to end downloading in dd/mm/yyyy
+
+- verbose:
+
+  Print query summary
+
+- to_csv:
+
+  Creates a csv file. FALSE by default
+
+- csv_path:
+
+  Path to save the csv file.
+
+## Value
+
+data.frame with Temperature (C), Relative Humidity (%), Wind Speed (m/s)
+and Direction (degrees), and Pressure information.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+# Downloading meteorological data from Pinheiros AQS
+# from January first to 7th of 2020
+my_user_name <- "John Doe"
+my_pass_word <- "drowssap"
+pin_code <- 99 # Check with cetesb_aqs
+start_date <- "01/01/2020"
+end_date <- "07/01/2020"
+
+pin_pol <- cetesb_retrieve_met(my_user_name, my_pass_word, pin_code,
+                               start_date, end_date)
+} # }
+```
